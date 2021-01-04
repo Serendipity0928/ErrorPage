@@ -1,0 +1,47 @@
+<!--https://fly.layui.com/notice/close.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="#"/>
+  <title>错误界面</title>
+  <link rel="stylesheet" href="../dist/assets/layui/css/layui.css">
+  <link rel="stylesheet" href="../dist/scss/ErrorPage.min.css">
+</head>
+<body>
+  <div class="fly-none" style="min-height: 0; padding: 0;">
+    <i class="layui-icon layui-icon-face-surprised"></i>
+  </div>
+  <div class="notice layui-text">
+    <p>似乎又好像是出错了...</p>
+    <p>出错的原因大概是：<span style="font-weight: bold">在进行试卷提交的时候，上传题目数量与系统数量不一致</span> </p>
+    <p>如果你多次遇到这种情况，请将这类情况反馈给我们，谢谢！
+      <button class="layui-btn layui-btn-danger Class_FeedBack" id="Js_Feedback"><i class="layui-icon layui-icon-email"></i>反馈</button>
+    </p>
+    <form class="layui-form layui-form-pane feed-back-form layui-hide layui-anim layui-anim-scaleSpring"
+          id="FeedBackForm" action="#" target="iFrame">
+      <div class="layui-form-item">
+        <div class="layui-form-item layui-form-text">
+          <label class="layui-form-label">具体详细信息</label>
+          <div class="layui-input-block">
+            <textarea name="desc" placeholder="您可以在这里书写详细的出错信息，当然你也可以不写。&#10;我们默认情况会将处理结果发送您的邮箱，您也可以在这里备注新的邮箱"
+                      class="layui-textarea"></textarea>
+          </div>
+        </div>
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="BackForm">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+    <iframe name="iFrame" id="iFrame" style="display:none"></iframe>
+  </div>
+
+
+  <script src="../dist/assets/layui/layui.all.js"></script>
+<!--  <script src="../dist/js/ErrorPage.min.js"></script>-->
+  <script>
+    "use strict";function ownKeys(t,e){var r,n=Object.keys(t);return Object.getOwnPropertySymbols&&(r=Object.getOwnPropertySymbols(t),e&&(r=r.filter(function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable})),n.push.apply(n,r)),n}function _objectSpread(t){for(var e=1;e<arguments.length;e++){var r=null!=arguments[e]?arguments[e]:{};e%2?ownKeys(Object(r),!0).forEach(function(e){_defineProperty(t,e,r[e])}):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(r)):ownKeys(Object(r)).forEach(function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(r,e))})}return t}function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}var $=layui.$,form=layui.form;function FeedBackCommit(){var t=!1;$("#Js_Feedback").click(function(){return!t&&void layer.alert("是够需要填写详细的反馈信息？",{title:"信息确认",skin:"layui-layer-molv",btn:["我要填写","直接报告>>"],yes:function(e){$("#FeedBackForm").removeClass("layui-hide"),t=!0,layer.close(e)},btn2:function(){AjaxSubmit({})}})})}function BackFormSubmit(){form.on("submit(BackForm)",function(e){return AjaxSubmit(e.field),!1})}function AjaxSubmit(e){$.post("后台bai地址du",_objectSpread(_objectSpread({},e),{},{sysInfo:"sys"}),function(e){console.log(e)})}$(FeedBackCommit(),BackFormSubmit());
+  </script>
+</body>
+</html>
