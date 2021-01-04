@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>反馈中心</title>
+  <link rel="stylesheet" href="../dist/scss/FeedBack.min.css">
+</head>
+<body>
+  <div class="help-center-banner">
+    <div class="help-center-search clearfix">
+      <div>
+        <input type="text" class="help-search-put fl" placeholder="您好，请问需要什么帮助？">
+        <!--如果是变成提问按钮时，增加类名 has-words 去掉了搜索图标 -->
+        <span class="qt-btn btn-green-linear search-subtn fl">
+          <a href="javascript:;"><!--提问--></a>
+        </span>
+      </div>
+      <div class="help-search-drop">
+        <div class="drop-box">
+          <ul>
+            <li><a href="//www.58pic.com/index.php?m=HelpCenter&amp;qid=44">充值了VIP，怎么现在这个帐号下还是没有VIP?</a></li>
+            <li><a href="//www.58pic.com/index.php?m=HelpCenter&amp;qid=42">点击下载页下载空白/倒计时/未弹出下载框，怎么回事？</a></li>
+            <li><a href="//www.58pic.com/index.php?m=HelpCenter&amp;qid=36">基础vip不能下载精选图片？</a></li>
+            <li><a href="//www.58pic.com/index.php?m=HelpCenter&amp;qid=55">登录千图网下载提示帐号存在多人使用，什么情况？</a></li>
+          </ul>
+          <p class="error-tip"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="help-center-container">
+    <div class="feedback-content">
+      <p>您可以通过访问<a href="//www.58pic.com/index.php?m=HelpCenter">「帮助中心」</a>查看热门问题、热门意见反馈</p>
+      <div class="feedback-type">
+        <span class="type-title">反馈类型：</span>
+        <div class="type-list">
+          <a href="javascript:;" class="t1" type="1">使用问题</a>
+          <a href="javascript:;" class="t2 on" type="2">产品功能改进</a>
+          <a href="javascript:;" class="t3" type="3">提交素材需求</a>
+        </div>
+      </div>
+      <div class="suggest-form">
+        <form action="">
+          <div class="input-inline">
+            <span class="demand"><i>* </i>需求内容：</span>
+            <div class="suggest-textarea">
+              <textarea id="question" name="" placeholder="请输入你在使用过程里遇到的问题？（优质的提问，通常在20-100字之间哦）" maxlength="500"></textarea>
+              <span class="count-tip">25-500</span>
+            </div>
+            <p class="error-info">字数限制在25~500字</p>
+          </div><div class="input-inline" id="case_diagram" style="display: none;"><span class="demand"><i>* </i>案例图：</span><div class="card-box waiting" id="card-box"><div class="photo-box fl"><div class="border-box on id_picurl border-box-add"><div class="picurl_close_o" data-id="1"><i class="icon icon-guanbi"></i></div><img src="" id="case_diagram_o" data-src=""><a href="javascript:;" class="image-button" data-id="1"><i class="icon icon-jiahao"></i></a><input class="upload-img1" data-id="1" type="file" style="display:none"></div></div><div class="photo-box fl"><div class="border-box id_picurl_back border-box-add"><div class="picurl_close_t" data-id="2"><i class="icon icon-guanbi"></i></div><img src="" id="case_diagram_t"><a href="javascript:;" class="image-button" data-id="2"><i class="icon icon-jiahao"></i></a><input class="upload-img2" data-id="2" type="file" style="display:none"></div></div><div class="photo-box fl"><div class="border-box caiyin border-box-add"><div class="picurl_close_s" data-id="3"><i class="icon icon-guanbi"></i></div><img src="" id="case_diagram_s"><a href="javascript:;" class="image-button" data-id="3"><i class="icon icon-jiahao"></i></a><input class="upload-img3" data-id="3" type="file" style="display:none"></div></div></div><p class="error-info">支持格式：jpg、jpeg、png</p></div><div class="input-inline" id="material_type" style="display: none;"><span class="demand"><i>* </i>素材类型：</span><div class="suggest-select" id="select_lei"><div class="qtw-select"><div class="qtw-select--con"><input type="text" readonly="readonly" placeholder="请选择" id="userInfo-level1-text" class="qtw-input"><i class="icon is-arrow icon-xialajiantou"></i><i class="icon is-close icon-p-x"></i></div><div class="qtw-select--dropdown"><ul class="qtw-select--dropdown-list" id="userInfo-level1"><li data-label="2" class="qtw-select--dropdown-item user_first icon icon-gou2" value="2">平面广告</li><li data-label="3" class="qtw-select--dropdown-item user_first icon icon-gou2" value="3">电商淘宝</li><li data-label="4" class="qtw-select--dropdown-item user_first icon icon-gou2" value="4">装饰装修</li><li data-label="5" class="qtw-select--dropdown-item user_first icon icon-gou2" value="5">网页UI</li><li data-label="7" class="qtw-select--dropdown-item user_first icon icon-gou2" value="7">产品工业</li><li data-label="8" class="qtw-select--dropdown-item user_first icon icon-gou2" value="8">PPT模板</li><li data-label="10" class="qtw-select--dropdown-item user_first icon icon-gou2" value="10">背景</li><li data-label="11" class="qtw-select--dropdown-item user_first icon icon-gou2" value="11">设计元素</li><li data-label="12" class="qtw-select--dropdown-item user_first icon icon-gou2" value="12">Excel模板</li><li data-label="14" class="qtw-select--dropdown-item user_first icon icon-gou2" value="14">简历模板</li><li data-label="15" class="qtw-select--dropdown-item user_first icon icon-gou2" value="15">Word模板</li><li data-label="16" class="qtw-select--dropdown-item user_first icon icon-gou2" value="16">新媒体用图</li><li data-label="17" class="qtw-select--dropdown-item user_first icon icon-gou2" value="17">插画绘画</li><li data-label="41" class="qtw-select--dropdown-item user_first icon icon-gou2" value="41">艺术字</li><li data-label="53" class="qtw-select--dropdown-item user_first icon icon-gou2" value="53">高清图库</li><li data-label="56" class="qtw-select--dropdown-item user_first icon icon-gou2" value="56">视频模板</li></ul><div class="qtw-scrollbar"><div class="qtw-scroll--slider"></div></div></div></div><div class="qtw-select"><div class="qtw-select--con"><input type="text" readonly="readonly" placeholder="请选择" id="userInfo-level2-text" class="qtw-input"><i class="icon is-arrow icon-xialajiantou"></i><i class="icon is-close icon-p-x"></i></div><div class="qtw-select--dropdown"><ul class="qtw-select--dropdown-list" id="userInfo-level2"></ul><div class="qtw-scrollbar"><div class="qtw-scroll--slider"></div></div></div></div></div><p class="error-info"></p></div><div class="input-inline" id="material_industry" style="display: none;"><span class="demand"><i>* </i>素材使用行业：</span><div class="suggest-select" id="select_ye"><div class="qtw-select"><div class="qtw-select--con"><input type="text" readonly="readonly" placeholder="请选择" id="userInfo-industry-text" class="qtw-input"><i class="icon is-arrow icon-xialajiantou"></i><i class="icon is-close icon-p-x"></i></div><div class="qtw-select--dropdown"><ul class="qtw-select--dropdown-list" id="userInfo-industry"><li data-label="18" class="qtw-select--dropdown-item user_first icon icon-gou2" value="18">电商</li><li data-label="19" class="qtw-select--dropdown-item user_first icon icon-gou2" value="19">互联网</li><li data-label="20" class="qtw-select--dropdown-item user_first icon icon-gou2" value="20">印刷</li><li data-label="21" class="qtw-select--dropdown-item user_first icon icon-gou2" value="21">广告</li><li data-label="22" class="qtw-select--dropdown-item user_first icon icon-gou2" value="22">教育</li><li data-label="23" class="qtw-select--dropdown-item user_first icon icon-gou2" value="23">金融</li><li data-label="24" class="qtw-select--dropdown-item user_first icon icon-gou2" value="24">房地产</li><li data-label="25" class="qtw-select--dropdown-item user_first icon icon-gou2" value="25">咨询</li><li data-label="26" class="qtw-select--dropdown-item user_first icon icon-gou2" value="26">旅游</li><li data-label="27" class="qtw-select--dropdown-item user_first icon icon-gou2" value="27">零售</li><li data-label="28" class="qtw-select--dropdown-item user_first icon icon-gou2" value="28">制造</li><li data-label="29" class="qtw-select--dropdown-item user_first icon icon-gou2" value="29">交通运输</li><li data-label="30" class="qtw-select--dropdown-item user_first icon icon-gou2" value="30">医疗</li><li data-label="31" class="qtw-select--dropdown-item user_first icon icon-gou2" value="31">能源</li><li data-label="32" class="qtw-select--dropdown-item user_first icon icon-gou2" value="32">政府</li><li data-label="33" class="qtw-select--dropdown-item user_first icon icon-gou2" value="33">农业</li><li data-label="34" class="qtw-select--dropdown-item user_first icon icon-gou2" value="34">其他</li><li data-label="469" class="qtw-select--dropdown-item user_first icon icon-gou2" value="469">公关会展</li><li data-label="470" class="qtw-select--dropdown-item user_first icon icon-gou2" value="470">院校科研/体育</li><li data-label="471" class="qtw-select--dropdown-item user_first icon icon-gou2" value="471">美食餐饮</li><li data-label="472" class="qtw-select--dropdown-item user_first icon icon-gou2" value="472">美容保健</li></ul><div class="qtw-scrollbar"><div class="qtw-scroll--slider"></div></div></div></div></div><p class="error-info"></p></div><div class="input-inline" id="material_color" style="display: none;"><span class="demand">颜色：</span><div class="label-main"><input type="radio" name="color_type" id="color-0" value="0" checked=""><label for="color-0">无限制</label><input type="radio" name="color_type" id="color-1" value="1"><label for="color-1">冷色调</label><input type="radio" name="color_type" id="color-2" value="2"><label for="color-2">暖色调</label><input type="radio" name="color_type" id="color-3" value="3"><label for="color-3">中性色</label><input type="radio" name="color_type" id="color-4" value="4"><label for="color-4">黑白</label></div></div><input type="hidden" id="colorFirst" value="0"><div class="input-inline" style="margin-bottom: 0px"><span class="demand">联系方式：</span><input id="contact_info" type="text" class="contact-put" placeholder="请留下联系方式（手机号、QQ、邮箱）"></div></form></div><p id="opinion" style="margin-left: 130px">
+                如果您的意见常见而有价值，我们将会精选至帮助中心
+            </p><div class="send-button"><span class="qt-btn btn-green-linear"><a>发送反馈</a></span><span class="qt-btn btn-green" id="cancle_center"><a href="#">取消</a></span></div></div></div>
+</body>
+</html>
