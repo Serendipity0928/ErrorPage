@@ -42,12 +42,12 @@ function BackFormSubmit() {
 
 //3. Ajax提交
 function AjaxSubmit(userInfo) {
-  let sysInfo = 'sys';  //系统提示信息
-  $.post('后台bai地址du', {...userInfo, sysInfo}, function(res){
-    console.log(res);
+  console.log(userInfo);
+  $.post('/errors/', userInfo, function(res){
+    if(res.code) {
+      layer.msg(res.data, {icon:1})
+    }else {
+      layer.msg(res.msg, {icon:2})
+    }
   });
 }
-
-
-
-
